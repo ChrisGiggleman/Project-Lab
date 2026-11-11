@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-11 — IAM-FS01 Active Directory DNS discovery verified
+- On IAM-FS01, an explicit query to `192.168.191.10` returned the `corp.iamlab.test` A record (`192.168.191.10`).
+- An LDAP DC discovery SRV query returned target `iam-dc01.corp.iamlab.test` and its A record (`192.168.191.10`).
+- Windows DNS service discovery succeeded; the guest adapter's assigned DNS server and static IP still need confirmation before domain join.
+
 ## 2026-11-11 — IAM-FS01 identity and OS verified
 - Verified Windows Server 2025 Standard Evaluation (build 10.0.26100) from PowerShell executed inside IAM-FS01.
 - Verified in-guest hostname `IAM-FS01` and successful local Administrator sign-in.
