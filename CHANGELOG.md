@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-11 — IAM-FS01 identity and OS verified
+- Verified Windows Server 2025 Standard Evaluation (build 10.0.26100) from PowerShell executed inside IAM-FS01.
+- Verified in-guest hostname `IAM-FS01` and successful local Administrator sign-in.
+- Next: validate VMware Tools and configure VMnet1 static IP/DNS before attempting a domain join.
+
 ## 2026-11-11 — IAM-FS01 installation milestone
 - Reported IAM-FS01 Windows Server setup reached the local Administrator account creation stage; in-guest sign-in, edition, hostname and network settings still need verification.
 - Kept domain join, file shares and permission testing marked as incomplete.
