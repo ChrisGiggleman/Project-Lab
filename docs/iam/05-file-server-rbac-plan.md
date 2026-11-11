@@ -1,6 +1,6 @@
 # Lab 05 — SMB File Server & Role-Based Access (Planned)
 
-> **Status:** `IAM-FS01` Windows Server 2025 Standard Evaluation booted and local Administrator login succeeded. `hostname` output confirmed IAM-FS01 and the OS reported build 10.0.26100. LDAP 389 and Kerberos 88 connections to the DC succeeded from `192.168.191.11`, and Server Manager shows domain `corp.iamlab.test`. Secure-channel verification, AD computer object placement, VMware Tools and SMB/NTFS permissions are still pending. No share or NTFS access enforcement has been tested.
+> **Status:** `IAM-FS01` Windows Server 2025 Standard Evaluation booted and local Administrator login succeeded. `hostname` output confirmed IAM-FS01 and the OS reported build 10.0.26100. LDAP 389 and Kerberos 88 connections to the DC succeeded from `192.168.191.11`, and Server Manager shows domain `corp.iamlab.test`. Secure-channel verification passed (`Test-ComputerSecureChannel : True`) and `nltest` discovered IAM-DC01. AD computer object placement, VMware Tools and SMB/NTFS permissions are still pending. No share or NTFS access enforcement has been tested.
 
 ## Scenario
 Two fictional employees have different permissions: Alex (IT) should be able to access IT resources, while Jordan (Finance) should be able to access Finance resources. Each should be denied access to the other department's share.
@@ -19,7 +19,8 @@ Two fictional employees have different permissions: Alex (IT) should be able to 
 - [x] Verify source IP `192.168.191.11`, configured DNS server `192.168.191.10`, and LDAP/Kerberos TCP 389/88 connectivity from IAM-FS01 (screenshot verified).
 - [ ] Confirm netmask, gateway and VMware Tools/VMnet1 configuration.
 - [x] Join the server to `corp.iamlab.test` (Server Manager domain membership screenshot verified).
-- [ ] Confirm AD computer secure channel and verify the server computer account appears in Active Directory.
+- [x] Confirm IAM-FS01 secure channel and discover domain controller (`Test-ComputerSecureChannel` returned `True`; `nltest /dsgetdc:corp.iamlab.test` succeeded).
+- [ ] Verify the IAM-FS01 computer object is present in Active Directory on IAM-DC01.
 - [ ] Move IAM-FS01 computer account to `OU=Servers,OU=IAM-Lab,DC=corp,DC=iamlab,DC=test` after verifying the object.
 - [ ] Create IT and Finance folders and SMB shares.
 - [ ] Create domain-local groups `DL_IT_Share_RW` and `DL_Finance_Share_RW`.
