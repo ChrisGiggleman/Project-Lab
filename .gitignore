@@ -1,0 +1,30 @@
+# Secrets and machine-generated files
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.pem
+*.key
+*.kdbx
+*secret*.json
+*secret*.yaml
+*secret*.yml
+*.log
+*.tmp
+*.bak
+
+# VM images / disk files — never publish
+*.iso
+*.vmdk
+*.vmsd
+*.vmsn
+*.vmem
+*.nvram
+*.vmx
+*.vmxf
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
