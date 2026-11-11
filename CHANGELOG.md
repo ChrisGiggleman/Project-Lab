@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-11 — IAM-FS01 joined to Active Directory
+- Verified IAM-FS01 source IP `192.168.191.11` and DNS server `192.168.191.10` in PowerShell screenshot.
+- Verified TCP connectivity from IAM-FS01 to IAM-DC01 on LDAP 389 and Kerberos 88 (`TcpTestSucceeded : True`).
+- Server Manager shows `IAM-FS01` joined to `corp.iamlab.test` with the domain firewall profile enabled.
+- Next: run secure-channel validation on the member server, verify the AD computer object, and organize the server account in the Servers OU. SMB/NTFS shares have not yet been created.
+
 ## 2026-11-11 — IAM-FS01 Active Directory DNS discovery verified
 - On IAM-FS01, an explicit query to `192.168.191.10` returned the `corp.iamlab.test` A record (`192.168.191.10`).
 - An LDAP DC discovery SRV query returned target `iam-dc01.corp.iamlab.test` and its A record (`192.168.191.10`).
