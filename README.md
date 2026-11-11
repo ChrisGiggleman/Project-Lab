@@ -17,7 +17,7 @@
 | Organizational units for employee and admin separation | **Completed** | [Directory and onboarding](docs/iam/03-directory-and-onboarding.md) |
 | Initial employee provisioning (IT and Finance) | **Completed (lab-reported)** | AD user verification demonstrated for IT; Finance account created |
 | Four departmental global security groups | **Completed** | PowerShell group enumeration; IT membership verified |
-| Member file server VM (`IAM-FS01`) | **OS installed/account created (reported); configuration pending** | [RBAC test plan](docs/iam/05-file-server-rbac-plan.md) |
+| Member file server VM (`IAM-FS01`) | **Windows Server 2025 installed; name and OS verified; network pending** | [RBAC test plan](docs/iam/05-file-server-rbac-plan.md) |
 | Domain join, SMB/NTFS authorization testing | **Planned** | [RBAC test plan](docs/iam/05-file-server-rbac-plan.md) |
 | Entra ID integration, MFA/SSO, access reviews | **Planned** | [Roadmap](ROADMAP.md) |
 
@@ -32,7 +32,7 @@ Main Windows workstation / VMware Workstation
     │   ├── AD DS / DNS / Global Catalog
     │   ├── corp.iamlab.test
     │   └── Departmental OUs and security groups
-    └── IAM-FS01 — file-server candidate (OS and local account created; domain join pending)
+    └── IAM-FS01 — Windows Server 2025 Standard Evaluation (name and OS verified; network and domain join pending)
         ├── IT resource access (planned)
         └── Finance resource access (planned)
 
