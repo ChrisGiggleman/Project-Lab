@@ -15,7 +15,8 @@ Two fictional employees have different permissions: Alex (IT) should be able to 
 - [x] Install Windows Server and create local Administrator account on IAM-FS01; verify in-guest sign-in and edition (screenshot evidence)
 - [x] Confirm Windows hostname IAM-FS01 (verified using `hostname`).
 - [ ] Confirm VMware Tools and Host-only VMnet1 configuration.
-- [ ] Set static IP and DNS to IAM-DC01; verify domain name resolution.
+- [x] Verify domain name A record and LDAP SRV discovery by explicitly querying DNS server `192.168.191.10` from IAM-FS01 (screenshot verified).
+- [ ] Confirm assigned VMnet1 static IP `192.168.191.11/24`, system DNS `192.168.191.10`, and necessary AD communication; do not assume explicit DNS queries prove the configured DNS settings.
 - [ ] Join the server to `corp.iamlab.test` and restart.
 - [ ] Create IT and Finance folders and SMB shares.
 - [ ] Create domain-local groups `DL_IT_Share_RW` and `DL_Finance_Share_RW`.
