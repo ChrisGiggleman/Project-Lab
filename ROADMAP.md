@@ -22,10 +22,12 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 
 - [x] Create the second VMware VM configuration, `IAM-FS01` (completed—reported)
 - [x] Install Windows Server 2025 Standard Evaluation on `IAM-FS01`, configure Administrator account, sign in, and verify `hostname`/OS version (verified by in-guest PowerShell screenshot)
-- [ ] Verify VMware Tools and VMnet1 host-only adapter; configure static IP `192.168.191.11/24` and DNS `192.168.191.10` pointing to IAM-DC01
+- [x] Verify IAM-FS01 source address `192.168.191.11` and configured DNS server `192.168.191.10`; DNS A/SRV resolution and LDAP/Kerberos TCP checks succeeded (screenshots verified)
+- [ ] Verify VMware Tools and VMnet1 host-only adapter details / subnet mask and default gateway (not yet independently verified)
 - [x] Verify AD DNS A record (`corp.iamlab.test` → `192.168.191.10`) and LDAP DC discovery SRV record from IAM-FS01 using DNS server `192.168.191.10` (screenshot verified)
-- [ ] Confirm IAM-FS01's configured preferred DNS server, static IP and domain join ports before joining
-- [ ] Join `IAM-FS01` to `corp.iamlab.test`
+- [x] Confirm LDAP TCP 389 and Kerberos TCP 88 reachable from `192.168.191.11` (`TcpTestSucceeded : True`)
+- [x] Join `IAM-FS01` to `corp.iamlab.test` (Server Manager domain membership screenshot verified)
+- [ ] Verify AD computer secure channel and directory computer object, then move member-server account to the `IAM-Lab/Servers` OU
 - [ ] Create departmental global groups and domain-local resource access groups (AGDLP)
 - [ ] Create IT and Finance SMB shares with NTFS and share permissions
 - [ ] Verify authorized access and cross-department denial with non-privileged test users
