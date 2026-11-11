@@ -21,8 +21,8 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 ## Phase 2 — Resource authorization
 
 - [x] Create the second VMware VM configuration, `IAM-FS01` (completed—reported)
-- [ ] Install the Windows Server OS on `IAM-FS01`
-- [ ] Configure static IP and DNS pointing at the domain controller
+- [x] Install Windows Server on `IAM-FS01` and create local Administrator sign-in (completed—reported; operating system edition and sign-in to verify)
+- [ ] Verify IAM-FS01's name, VMware Tools, VMnet1 adapter, and static IP/DNS pointing to the domain controller
 - [ ] Join `IAM-FS01` to `corp.iamlab.test`
 - [ ] Create departmental global groups and domain-local resource access groups (AGDLP)
 - [ ] Create IT and Finance SMB shares with NTFS and share permissions
