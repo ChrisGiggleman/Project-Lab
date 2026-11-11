@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-11 — IAM-FS01 computer trust confirmed
+- On IAM-FS01, `Get-CimInstance Win32_ComputerSystem` reported `PartOfDomain : True` and `Domain : corp.iamlab.test`.
+- `Test-ComputerSecureChannel -Verbose` returned `True` and reported that the secure channel with the domain is in good condition.
+- `nltest /dsgetdc:corp.iamlab.test` successfully discovered `IAM-DC01.corp.iamlab.test` at `192.168.191.10`.
+- AD computer account location has not yet been verified; next action is to inspect and relocate IAM-FS01 into the lab Servers OU. No SMB/NTFS shares have been configured yet.
+
 ## 2026-11-11 — IAM-FS01 joined to Active Directory
 - Verified IAM-FS01 source IP `192.168.191.11` and DNS server `192.168.191.10` in PowerShell screenshot.
 - Verified TCP connectivity from IAM-FS01 to IAM-DC01 on LDAP 389 and Kerberos 88 (`TcpTestSucceeded : True`).
