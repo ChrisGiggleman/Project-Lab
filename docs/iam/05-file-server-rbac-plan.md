@@ -1,6 +1,6 @@
 # Lab 05 — SMB File Server & Role-Based Access (Planned)
 
-> **Status:** `IAM-FS01` virtual machine created; OS installation has not started. No share or NTFS access enforcement has been tested.
+> **Status:** `IAM-FS01` Windows installation and local Administrator account creation reported; guest login, edition, hostname and network settings still require verification. No domain join, share or NTFS access enforcement has been tested.
 
 ## Scenario
 Two fictional employees have different permissions: Alex (IT) should be able to access IT resources, while Jordan (Finance) should be able to access Finance resources. Each should be denied access to the other department's share.
@@ -12,7 +12,8 @@ Two fictional employees have different permissions: Alex (IT) should be able to 
 - **Do not** promote the file server to a domain controller.
 
 ## Implementation checklist
-- [ ] Install Windows Server on IAM-FS01 and configure its hostname.
+- [x] Install Windows Server and create local Administrator account on IAM-FS01 (user-reported; verify guest sign-in and edition)
+- [ ] Rename the guest to IAM-FS01 and verify hostname after restart.
 - [ ] Set static IP and DNS to IAM-DC01; verify domain name resolution.
 - [ ] Join the server to `corp.iamlab.test` and restart.
 - [ ] Create IT and Finance folders and SMB shares.
