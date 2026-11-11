@@ -17,7 +17,7 @@
 | Organizational units for employee and admin separation | **Completed** | [Directory and onboarding](docs/iam/03-directory-and-onboarding.md) |
 | Initial employee provisioning (IT and Finance) | **Completed (lab-reported)** | AD user verification demonstrated for IT; Finance account created |
 | Four departmental global security groups | **Completed** | PowerShell group enumeration; IT membership verified |
-| Member file server VM (`IAM-FS01`) | **Domain joined; network services verified; trust check pending** | [RBAC test plan](docs/iam/05-file-server-rbac-plan.md) |
+| Member file server VM (`IAM-FS01`) | **Domain joined; secure channel and DC discovery verified; AD OU placement pending** | [RBAC test plan](docs/iam/05-file-server-rbac-plan.md) |
 | SMB/NTFS authorization testing | **Planned** | [RBAC test plan](docs/iam/05-file-server-rbac-plan.md) |
 | Entra ID integration, MFA/SSO, access reviews | **Planned** | [Roadmap](ROADMAP.md) |
 
