@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-11 — IAM-FS01 installation milestone
+- Reported IAM-FS01 Windows Server setup reached the local Administrator account creation stage; in-guest sign-in, edition, hostname and network settings still need verification.
+- Kept domain join, file shares and permission testing marked as incomplete.
+
 ## 2026-11-11 — Portfolio launch
 - Created the central Project-Lab portfolio and linked related IAM, Docker, proxy, monitoring and analytics repositories.
 - Documented Windows Server 2025 installation, Active Directory forest, DNS, initial IAM directory layout and group checks.
