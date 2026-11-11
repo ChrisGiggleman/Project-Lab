@@ -13,7 +13,7 @@ Main Windows workstation — VMware Workstation
     │   ├── corp.iamlab.test (AD DS + DNS)
     │   ├── Global Catalog / Netlogon
     │   └── Departmental OU and security-group structure
-    └── IAM-FS01 (VM definition created; OS pending)
+    └── IAM-FS01 (Windows setup/local account reported; domain join pending)
         └── Planned address: 192.168.191.11
 
 Separate GEEKOM mini PC
@@ -35,7 +35,7 @@ Separate GEEKOM mini PC
 | Machine | Guest OS | vCPU | RAM | Disk | Status |
 |---|---|---:|---:|---:|---|
 | IAM-DC01 | Windows Server 2025 Desktop Experience | 2 | 4 GB | 80 GB | Operating |
-| IAM-FS01 | Windows Server 2025 Desktop Experience | 2 (planned) | 4 GB (planned) | 60 GB (planned) | VM configuration only |
+| IAM-FS01 | Windows Server 2025 (edition to verify) | 2 (planned) | 4 GB (planned) | 60 GB (planned) | Windows setup/local account reported; initial configuration pending |
 
 ## Security boundaries
 Host-only networking keeps domain services off the ordinary LAN. The host's firewall remains enabled; one scoped rule permits ICMPv4 echo requests from the host-only adapter to IAM-DC01. Avoid publishing secrets, account passwords, license keys, or real production configurations.
