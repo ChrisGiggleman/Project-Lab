@@ -1,6 +1,6 @@
 # Lab 05 — SMB File Server & Role-Based Access (Planned)
 
-> **Status:** `IAM-FS01` Windows Server 2025 Standard Evaluation booted and local Administrator login succeeded. `hostname` output confirmed IAM-FS01 and the OS reported build 10.0.26100. VMware Tools, networking, domain join and permissions remain pending. No domain join, share or NTFS access enforcement has been tested.
+> **Status:** `IAM-FS01` Windows Server 2025 Standard Evaluation booted and local Administrator login succeeded. `hostname` output confirmed IAM-FS01 and the OS reported build 10.0.26100. LDAP 389 and Kerberos 88 connections to the DC succeeded from `192.168.191.11`, and Server Manager shows domain `corp.iamlab.test`. Secure-channel verification, AD computer object placement, VMware Tools and SMB/NTFS permissions are still pending. No share or NTFS access enforcement has been tested.
 
 ## Scenario
 Two fictional employees have different permissions: Alex (IT) should be able to access IT resources, while Jordan (Finance) should be able to access Finance resources. Each should be denied access to the other department's share.
@@ -16,8 +16,11 @@ Two fictional employees have different permissions: Alex (IT) should be able to 
 - [x] Confirm Windows hostname IAM-FS01 (verified using `hostname`).
 - [ ] Confirm VMware Tools and Host-only VMnet1 configuration.
 - [x] Verify domain name A record and LDAP SRV discovery by explicitly querying DNS server `192.168.191.10` from IAM-FS01 (screenshot verified).
-- [ ] Confirm assigned VMnet1 static IP `192.168.191.11/24`, system DNS `192.168.191.10`, and necessary AD communication; do not assume explicit DNS queries prove the configured DNS settings.
-- [ ] Join the server to `corp.iamlab.test` and restart.
+- [x] Verify source IP `192.168.191.11`, configured DNS server `192.168.191.10`, and LDAP/Kerberos TCP 389/88 connectivity from IAM-FS01 (screenshot verified).
+- [ ] Confirm netmask, gateway and VMware Tools/VMnet1 configuration.
+- [x] Join the server to `corp.iamlab.test` (Server Manager domain membership screenshot verified).
+- [ ] Confirm AD computer secure channel and verify the server computer account appears in Active Directory.
+- [ ] Move IAM-FS01 computer account to `OU=Servers,OU=IAM-Lab,DC=corp,DC=iamlab,DC=test` after verifying the object.
 - [ ] Create IT and Finance folders and SMB shares.
 - [ ] Create domain-local groups `DL_IT_Share_RW` and `DL_Finance_Share_RW`.
 - [ ] Nest `GG_IT_Employees` into `DL_IT_Share_RW`.
