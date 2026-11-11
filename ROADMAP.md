@@ -27,7 +27,8 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 - [x] Verify AD DNS A record (`corp.iamlab.test` → `192.168.191.10`) and LDAP DC discovery SRV record from IAM-FS01 using DNS server `192.168.191.10` (screenshot verified)
 - [x] Confirm LDAP TCP 389 and Kerberos TCP 88 reachable from `192.168.191.11` (`TcpTestSucceeded : True`)
 - [x] Join `IAM-FS01` to `corp.iamlab.test` (Server Manager domain membership screenshot verified)
-- [ ] Verify AD computer secure channel and directory computer object, then move member-server account to the `IAM-Lab/Servers` OU
+- [x] Verify IAM-FS01 domain membership, computer secure channel (`Test-ComputerSecureChannel : True`), and domain controller discovery (`nltest /dsgetdc` successfully returns IAM-DC01) — screenshot verified
+- [ ] Verify AD computer object on IAM-DC01 and move it to `IAM-Lab/Servers` OU
 - [ ] Create departmental global groups and domain-local resource access groups (AGDLP)
 - [ ] Create IT and Finance SMB shares with NTFS and share permissions
 - [ ] Verify authorized access and cross-department denial with non-privileged test users
