@@ -58,6 +58,12 @@ The lab is **not bridged to the home LAN**; domain controller services remain on
 
 The individual repositories contain the detailed implementation notes and files for those independent projects. This repository is the central navigation and progress hub, with dedicated write-ups for the Windows IAM lab.
 
+## Security project idea backlog
+
+The [Security Portfolio Backlog](SECURITY-PORTFOLIO-BACKLOG.md) tracks **13 candidate labs** across detection and response, threat intelligence and investigation, security engineering, and AI security. These are proposals—not claims of completed implementations. The Active Directory idea extends the current IAM lab rather than duplicating it.
+
+All future lab write-ups use the same **problem → architecture → test plan → evidence and findings → limitations** standard. The current IAM-FS01 lab remains the active build.
+
 ## Documentation
 
 - [IAM Lab overview](docs/iam/README.md)
