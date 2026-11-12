@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-12 — Captured 13 cybersecurity portfolio ideas
+- Added [Security Portfolio Backlog](SECURITY-PORTFOLIO-BACKLOG.md) covering 4 Detection & Response ideas, 3 Threat Intelligence & Investigation ideas, 5 Security Engineering ideas, and 1 AI & Security idea.
+- Preserved all 13 supplied source links without claiming their destinations were reviewed.
+- Defined a consistent recruiter-facing documentation/evidence standard: objective, architecture, test methodology, findings, limitations, lessons learned and sanitization.
+- Preserved the Windows Active Directory project as the active lab; its extra project idea is treated as an extension rather than a new completed project.
+
 ## 2026-11-11 — IAM-FS01 computer trust confirmed
 - On IAM-FS01, `Get-CimInstance Win32_ComputerSystem` reported `PartOfDomain : True` and `Domain : corp.iamlab.test`.
 - `Test-ComputerSecureChannel -Verbose` returned `True` and reported that the secure channel with the domain is in good condition.
