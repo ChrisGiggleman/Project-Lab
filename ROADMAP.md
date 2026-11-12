@@ -1,6 +1,6 @@
 # Project-Lab Roadmap
 
-Last updated: **2026-11-11**
+Last updated: **2026-11-12**
 
 Status vocabulary: **Verified** (command/output observed), **Completed—reported** (user reports success, not yet independently verified), **In progress**, **Planned**.
 
@@ -58,6 +58,16 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 - [ ] Choose an eligible Microsoft Entra test tenant and review licensing needs
 - [ ] Study SSO integration (SAML/OIDC), Conditional Access, and user provisioning
 - [ ] Run a documented identity access review exercise
+
+## Candidate Security Projects — Backlog (13 ideas)
+
+- [x] Capture all **13** ideas and original reference links in [Security Portfolio Backlog](SECURITY-PORTFOLIO-BACKLOG.md).
+- [ ] Review source links, feasibility, tool licenses, hardware limits, risk boundaries and fit before selecting a project.
+- [ ] Select a next project **after** finishing the active IAM-FS01 AD object organization / AGDLP and file share authorization tests.
+- [ ] Produce a scoped architecture, test plan and evidence checklist for any selected candidate.
+- [ ] Verify and document actual findings, limitations and mitigations before describing a new project as complete.
+
+The **Active Directory Lab** idea extends the ongoing Windows IAM lab; do not count it as a second completed implementation. Suggested candidates after IAM are SIEM Log Analysis and SOC Detection & Response, contingent on resources and scope.
 
 ## Portfolio quality gates
 
