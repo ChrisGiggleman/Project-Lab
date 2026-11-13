@@ -33,8 +33,10 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 - [x] Create and validate four departmental global security groups (verified previously)
 - [x] Create `DL_IT_Share_RW` and `DL_Finance_Share_RW` and verify group nesting: `GG_IT_Employees` inside IT permission group and `GG_Finance_Employees` inside Finance permission group (PowerShell screenshot, 2026-11-13)
 - [x] Verify `DL_Finance_Share_RW` is DomainLocal / Security (screenshot)
-- [ ] Confirm `DL_IT_Share_RW` GroupScope = DomainLocal (scope line not visible in screenshot)
-- [ ] Create IT and Finance SMB shares with NTFS and share permissions
+- [x] Confirm `DL_IT_Share_RW` is DomainLocal / Security in PowerShell (screenshot, 2026-11-13)
+- [x] Create and verify `C:\LabShares\IT` and `C:\LabShares\Finance` directories on IAM-FS01 (PowerShell screenshot, 2026-11-13)
+- [ ] Inspect current NTFS ACL inheritance and access rules before changing folder permissions
+- [ ] Set least-privilege NTFS permissions and create IT and Finance SMB shares
 - [ ] Verify authorized access and cross-department denial with non-privileged test users
 - [ ] Document results with sanitized screenshots and PowerShell output
 
