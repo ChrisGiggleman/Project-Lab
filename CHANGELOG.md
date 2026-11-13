@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-13 — Finance NTFS ACL verified; both folders ready for SMB share configuration
+- `icacls C:\LabShares\Finance /grant:r` successfully granted SYSTEM/Administrators FullControl and `CORP\DL_Finance_Share_RW` Modify; `icacls /inheritance:r` completed successfully.
+- `Get-Acl` on `C:\LabShares\Finance` showed exactly three explicit Allow ACEs: SYSTEM FullControl, Administrators FullControl, and `CORP\DL_Finance_Share_RW` Modify/Synchronize; `IsInherited=False` for all and `AreAccessRulesProtected=True`.
+- IT and Finance folder ACL configuration and inheritance checks are now independently verified. SMB share creation and actual end-user authorization tests remain pending.
+- Next: explicitly scope share-level SMB permissions for IT and Finance; confirm share ACLs before attempting non-admin access tests.
+
 ## 2026-11-13 — IT NTFS DACL verified; Finance next
 - Final `icacls` and `Get-Acl` output showed exactly three explicit Allow entries on `C:\LabShares\IT`: SYSTEM FullControl, Administrators FullControl, and `CORP\DL_IT_Share_RW` Modify/Synchronize.
 - No broad `Users`, `Everyone`, or `Authenticated Users` ACEs remained; `IsInherited=False` for each entry and `AreAccessRulesProtected=True`.
