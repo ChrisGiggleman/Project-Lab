@@ -29,8 +29,9 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 - [x] Join `IAM-FS01` to `corp.iamlab.test` (Server Manager domain membership screenshot verified)
 - [x] Verify IAM-FS01 domain membership, computer secure channel (`Test-ComputerSecureChannel : True`), and domain controller discovery (`nltest /dsgetdc` successfully returns IAM-DC01) — screenshot verified
 - [x] Verify IAM-FS01 AD computer object exists and is enabled; ADUC shows it under `IAM-Lab/Servers` (GUI screenshot, 2026-11-13)
-- [ ] Run a fresh `Get-ADComputer` distinguished-name check to confirm its new Servers OU path (earlier captured output still shows `CN=Computers`)
-- [ ] Create departmental global groups and domain-local resource access groups (AGDLP)
+- [x] Independently verify `IAM-FS01` post-move Distinguished Name is `CN=IAM-FS01,OU=Servers,OU=IAM-Lab,DC=corp,DC=iamlab,DC=test` (PowerShell screenshot, 2026-11-13)
+- [x] Create and validate four departmental global security groups (verified previously)
+- [ ] Create `DL_IT_Share_RW` and `DL_Finance_Share_RW` domain-local Security groups; nest the matching departmental Global groups (AGDLP)
 - [ ] Create IT and Finance SMB shares with NTFS and share permissions
 - [ ] Verify authorized access and cross-department denial with non-privileged test users
 - [ ] Document results with sanitized screenshots and PowerShell output
