@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-13 — IT folder NTFS ACL change applied (validation pending)
+- `icacls C:\LabShares /save C:\IAM-Lab-ACL-Backup\before-ntfs-change.acl /T` completed for all three objects, with 0 failures.
+- On IAM-FS01, `icacls` successfully applied explicit SYSTEM and Administrators FullControl and `CORP\DL_IT_Share_RW` Modify to the IT folder.
+- `icacls C:\LabShares\IT /inheritance:r` succeeded, removing inherited ACEs from the IT folder.
+- **Still pending:** read-only final `icacls`/`Get-Acl` verification that no broad entries remain and required entries are present; no Finance permissions or SMB shares have yet been modified/created.
+
 ## 2026-11-13 — NTFS permission baseline inspected
 - Read-only `Get-Acl` inspection on IAM-FS01 showed both department folders inheriting `BUILTIN\\Users` ReadAndExecute, AppendData, and CreateFiles permissions, as well as inherited SYSTEM and Administrators FullControl. The Finance folder also shows an explicit Administrators FullControl ACE.
 - Broad inheritance needs removal on each child folder before publishing departmental SMB shares. Next: save ACL backup, disable inheritance on IT and grant SYSTEM/Administrators full control and the IT resource group Modify, then inspect resulting ACL before modifying Finance.
