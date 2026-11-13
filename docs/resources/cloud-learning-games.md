@@ -4,7 +4,7 @@
 
 **Source:** *Learn Cloud by Playing Games — Core Edition*, by **Sathish Kumar Subramani** (links transcribed from the user-provided resource graphic). This page is a curated index, not a claim that all resources have been completed, personally tested, or recently verified.
 
-**Resources:** 30 links across 8 categories. The library can grow as more resources are collected.
+**Resources:** 43 links in total — 30 cloud learning games and labs across 8 categories, plus 13 cybersecurity portfolio project ideas across 4 groups.
 
 ## Quick navigation
 
@@ -16,6 +16,7 @@
 - [Cloud security & pentesting](#cloud-security-pentesting)
 - [Multi-cloud](#multi-cloud)
 - [Capstone project](#capstone-project)
+- [Cybersecurity portfolio project ideas (13-project collection)](#cybersecurity-portfolio-project-ideas--13-project-collection)
 
 ## Suggested starting route (IAM / cybersecurity focus)
 
@@ -103,6 +104,46 @@
 - For each completed exercise, capture the goal, environment, steps performed, evidence, findings, remediation, and lessons learned. Link your completed lab report rather than labeling an unattempted resource as finished.
 - Links may change over time; confirm current availability and terms on the providers' sites.
 
-## Additional resource collections
+## Cybersecurity portfolio project ideas — 13-project collection
 
-More links (including the next collection from the ChatGPT Task Compatibility discussion) can be appended here or split into a dedicated companion page without changing this index's URL.
+These **13 proposed portfolio exercises** come from the second resource collection shared in the ChatGPT Task Compatibility discussion. They are **project ideas**, not completed lab results. For goals, sequencing, statuses and safety notes, see the [Security Portfolio Project Backlog](../../SECURITY-PORTFOLIO-BACKLOG.md).
+
+> **Link note:** The original LinkedIn short links are preserved exactly as supplied. Their final destinations and current availability have not been individually verified. Review each project's source and license before running code.
+
+### Detection & response
+
+| Project idea | What to practice | Original resource |
+|---|---|---|
+| SOC Detection & Response Platform | Detection rules, triage, MITRE ATT&CK | [Open reference](https://lnkd.in/gUvmmQGz) |
+| SIEM Log Analysis Platform | Correlate security logs and investigate events | [Open reference](https://lnkd.in/gA_mdGPH) |
+| Ransomware Detection System | Benign behavioral simulations and detections | [Open reference](https://lnkd.in/g5qbAzu5) |
+| Threat Hunting Platform | Evidence-driven endpoint hunting | [Open reference](https://lnkd.in/gteTx29q) |
+
+### Threat intelligence & investigation
+
+| Project idea | What to practice | Original resource |
+|---|---|---|
+| Threat Intelligence Platform | Indicators, enrichment, confidence and freshness | [Open reference](https://lnkd.in/gFEDsrT2) |
+| Malware Analysis Sandbox | Isolated sample observation and analysis reporting | [Open reference](https://lnkd.in/gtVyCHNs) |
+| DFIR Toolkit | Artifact collection, timeline and chain of custody | [Open reference](https://lnkd.in/gYRzCc-N) |
+
+### Security engineering
+
+| Project idea | What to practice | Original resource |
+|---|---|---|
+| Cloud Security Monitoring Dashboard | Configuration and identity monitoring | [Open reference](https://lnkd.in/gSpuiBt4) |
+| Active Directory Lab | Extend the existing Windows IAM lab | [Open reference](https://lnkd.in/gUD2prMf) |
+| Kubernetes Security Scanner | Kubernetes configuration and RBAC checks | [Open reference](https://lnkd.in/gbTKWg5R) |
+| Automated Vulnerability Scanner | Authorized scanning, risk ranking and remediation | [Open reference](https://lnkd.in/gNd6bxud) |
+| Web Application Testing Toolkit | Scoped testing and findings documentation | [Open reference](https://lnkd.in/gn5HU_T3) |
+
+### AI & security
+
+| Project idea | What to practice | Original resource |
+|---|---|---|
+| AI-Powered Phishing Detector | Evaluate email classification, errors and limitations | [Open reference](https://lnkd.in/ghgUGYH2) |
+
+### Practical project order
+
+**Current:** Finish the existing [Active Directory / IAM file-server lab](../iam/05-file-server-rbac-plan.md). **Next candidates:** SIEM Log Analysis → SOC Detection & Response → Vulnerability Assessment, each as a separate authorized and documented project. See the [full backlog](../../SECURITY-PORTFOLIO-BACKLOG.md) for all 13 candidate projects.
+
