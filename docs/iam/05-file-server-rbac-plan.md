@@ -27,8 +27,9 @@ Two fictional employees have different permissions: Alex (IT) should be able to 
 - [x] Review ACLs for both folders: inherited BUILTIN\\Users Read/Execute, CreateFiles, AppendData; inherited SYSTEM/Administrators Full Control (Finance also has explicit Administrators Full Control); screenshot 2026-11-13.
 - [x] Back up three ACLs to `C:\IAM-Lab-ACL-Backup\before-ntfs-change.acl` (icacls success screenshot).
 - [x] Apply explicit IT folder grants: SYSTEM FullControl, Administrators FullControl, `CORP\DL_IT_Share_RW` Modify; remove inherited ACEs using `icacls /inheritance:r` (commands succeeded).
-- [ ] Validate final IT folder DACL and inheritance disabled with `icacls`, `Get-Acl`, `AreAccessRulesProtected`; Finance DACL not yet changed.
-- [ ] Configure appropriate NTFS ACLs preserving SYSTEM and Administrators Full Control.
+- [x] Validate final IT folder DACL and inheritance disabled: explicit SYSTEM and Administrators Full Control and `CORP\DL_IT_Share_RW` Modify/Synchronize; no broad access ACEs; `AreAccessRulesProtected=True` (screenshot, 2026-11-13).
+- [ ] Apply same scoped ACL pattern to Finance: grant SYSTEM/Administrators Full Control and `CORP\DL_Finance_Share_RW` Modify, remove inherited entries, and independently validate before creating SMB shares.
+- [x] Configure and verify IT NTFS ACL preserving SYSTEM/Administrators Full Control; Finance configuration and verification pending.
 - [ ] Create IT and Finance SMB shares after NTFS access is validated.
 - [x] Create IT and Finance resource-level security groups in the IAM-Lab Groups OU (ADUC screenshot).
 - [x] Verify both `DL_Finance_Share_RW` and `DL_IT_Share_RW` are DomainLocal / Security (PowerShell screenshots; IT confirmed 2026-11-13).
