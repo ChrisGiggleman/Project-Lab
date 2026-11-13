@@ -39,8 +39,9 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 - [x] Back up 3 ACLs in `C:\IAM-Lab-ACL-Backup\before-ntfs-change.acl` (0 failures, screenshot 2026-11-13)
 - [x] Apply explicit grants to IT for SYSTEM and Administrators Full Control and `CORP\DL_IT_Share_RW` Modify; disable inheritance with `/inheritance:r` (commands succeeded, screenshot 2026-11-13)
 - [x] Verify IT folder final DACL: SYSTEM and Administrators Full Control; `CORP\DL_IT_Share_RW` Modify; no broad Users/Everyone ACEs; all ACEs explicit and `AreAccessRulesProtected=True` (2026-11-13 screenshot)
-- [ ] Apply and verify Finance folder equivalent scoped DACL (SYSTEM and Administrators Full Control; `CORP\DL_Finance_Share_RW` Modify; inheritance disabled)
-- [ ] Set least-privilege NTFS permissions and create IT and Finance SMB shares
+- [x] Apply and verify Finance folder scoped DACL: SYSTEM and Administrators FullControl; `CORP\DL_Finance_Share_RW` Modify; all entries explicit; `AreAccessRulesProtected=True` (PowerShell screenshots 2026-11-13)
+- [x] Verify least-privilege NTFS DACLs on both IT and Finance departmental folders
+- [ ] Create IT and Finance SMB shares with matching scoped share-level permissions; validate no unexpected access ACEs
 - [ ] Verify authorized access and cross-department denial with non-privileged test users
 - [ ] Document results with sanitized screenshots and PowerShell output
 
