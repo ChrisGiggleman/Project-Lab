@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-13 — NTFS permission baseline inspected
+- Read-only `Get-Acl` inspection on IAM-FS01 showed both department folders inheriting `BUILTIN\\Users` ReadAndExecute, AppendData, and CreateFiles permissions, as well as inherited SYSTEM and Administrators FullControl. The Finance folder also shows an explicit Administrators FullControl ACE.
+- Broad inheritance needs removal on each child folder before publishing departmental SMB shares. Next: save ACL backup, disable inheritance on IT and grant SYSTEM/Administrators full control and the IT resource group Modify, then inspect resulting ACL before modifying Finance.
+- No NTFS permission changes or SMB shares have yet been verified.
+
 ## 2026-11-13 — AGDLP scope complete and lab folders created
 - PowerShell confirmed `DL_IT_Share_RW` has `GroupScope = DomainLocal` and `GroupCategory = Security`; Finance group scope/category and both Global group nestings were confirmed previously.
 - On IAM-FS01, `Get-ChildItem C:\LabShares -Directory` returned both `Finance` and `IT` directories at their intended paths.
