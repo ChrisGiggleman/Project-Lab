@@ -1,6 +1,6 @@
 # Project-Lab Roadmap
 
-Last updated: **2026-11-12**
+Last updated: **2026-11-13**
 
 Status vocabulary: **Verified** (command/output observed), **Completed—reported** (user reports success, not yet independently verified), **In progress**, **Planned**.
 
@@ -28,7 +28,8 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 - [x] Confirm LDAP TCP 389 and Kerberos TCP 88 reachable from `192.168.191.11` (`TcpTestSucceeded : True`)
 - [x] Join `IAM-FS01` to `corp.iamlab.test` (Server Manager domain membership screenshot verified)
 - [x] Verify IAM-FS01 domain membership, computer secure channel (`Test-ComputerSecureChannel : True`), and domain controller discovery (`nltest /dsgetdc` successfully returns IAM-DC01) — screenshot verified
-- [ ] Verify AD computer object on IAM-DC01 and move it to `IAM-Lab/Servers` OU
+- [x] Verify IAM-FS01 AD computer object exists and is enabled; ADUC shows it under `IAM-Lab/Servers` (GUI screenshot, 2026-11-13)
+- [ ] Run a fresh `Get-ADComputer` distinguished-name check to confirm its new Servers OU path (earlier captured output still shows `CN=Computers`)
 - [ ] Create departmental global groups and domain-local resource access groups (AGDLP)
 - [ ] Create IT and Finance SMB shares with NTFS and share permissions
 - [ ] Verify authorized access and cross-department denial with non-privileged test users
