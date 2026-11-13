@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-13 — IT NTFS DACL verified; Finance next
+- Final `icacls` and `Get-Acl` output showed exactly three explicit Allow entries on `C:\LabShares\IT`: SYSTEM FullControl, Administrators FullControl, and `CORP\DL_IT_Share_RW` Modify/Synchronize.
+- No broad `Users`, `Everyone`, or `Authenticated Users` ACEs remained; `IsInherited=False` for each entry and `AreAccessRulesProtected=True`.
+- IT folder NTFS access **configuration verified**, but effective per-user access through SMB remains untested.
+- Next: apply and independently verify equivalent least-privilege DACL on `C:\LabShares\Finance`. Do not create SMB shares until both ACLs have been verified.
+
 ## 2026-11-13 — IT folder NTFS ACL change applied (validation pending)
 - `icacls C:\LabShares /save C:\IAM-Lab-ACL-Backup\before-ntfs-change.acl /T` completed for all three objects, with 0 failures.
 - On IAM-FS01, `icacls` successfully applied explicit SYSTEM and Administrators FullControl and `CORP\DL_IT_Share_RW` Modify to the IT folder.
