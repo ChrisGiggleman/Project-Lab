@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-13 — IAM-FS01 computer account organization
+- `Get-ADComputer` on IAM-DC01 confirmed IAM-FS01 is enabled and identified as Windows Server 2025 Standard Evaluation; initial distinguished name was in the default `CN=Computers` container.
+- Active Directory Users and Computers screenshot now shows IAM-FS01 beneath `IAM-Lab/Servers`, indicating the object was moved in the GUI.
+- A fresh post-move PowerShell distinguished-name verification is still pending; existing PowerShell output predates or does not yet reflect the move.
+- Next: independently confirm `CN=IAM-FS01,OU=Servers,OU=IAM-Lab,DC=corp,DC=iamlab,DC=test` before creating resource permission groups and shares.
+
 ## 2026-11-12 — Captured 13 cybersecurity portfolio ideas
 - Added [Security Portfolio Backlog](SECURITY-PORTFOLIO-BACKLOG.md) covering 4 Detection & Response ideas, 3 Threat Intelligence & Investigation ideas, 5 Security Engineering ideas, and 1 AI & Security idea.
 - Preserved all 13 supplied source links without claiming their destinations were reviewed.
