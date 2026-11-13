@@ -31,7 +31,9 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 - [x] Verify IAM-FS01 AD computer object exists and is enabled; ADUC shows it under `IAM-Lab/Servers` (GUI screenshot, 2026-11-13)
 - [x] Independently verify `IAM-FS01` post-move Distinguished Name is `CN=IAM-FS01,OU=Servers,OU=IAM-Lab,DC=corp,DC=iamlab,DC=test` (PowerShell screenshot, 2026-11-13)
 - [x] Create and validate four departmental global security groups (verified previously)
-- [ ] Create `DL_IT_Share_RW` and `DL_Finance_Share_RW` domain-local Security groups; nest the matching departmental Global groups (AGDLP)
+- [x] Create `DL_IT_Share_RW` and `DL_Finance_Share_RW` and verify group nesting: `GG_IT_Employees` inside IT permission group and `GG_Finance_Employees` inside Finance permission group (PowerShell screenshot, 2026-11-13)
+- [x] Verify `DL_Finance_Share_RW` is DomainLocal / Security (screenshot)
+- [ ] Confirm `DL_IT_Share_RW` GroupScope = DomainLocal (scope line not visible in screenshot)
 - [ ] Create IT and Finance SMB shares with NTFS and share permissions
 - [ ] Verify authorized access and cross-department denial with non-privileged test users
 - [ ] Document results with sanitized screenshots and PowerShell output
