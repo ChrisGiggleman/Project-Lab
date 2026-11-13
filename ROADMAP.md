@@ -41,7 +41,8 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 - [x] Verify IT folder final DACL: SYSTEM and Administrators Full Control; `CORP\DL_IT_Share_RW` Modify; no broad Users/Everyone ACEs; all ACEs explicit and `AreAccessRulesProtected=True` (2026-11-13 screenshot)
 - [x] Apply and verify Finance folder scoped DACL: SYSTEM and Administrators FullControl; `CORP\DL_Finance_Share_RW` Modify; all entries explicit; `AreAccessRulesProtected=True` (PowerShell screenshots 2026-11-13)
 - [x] Verify least-privilege NTFS DACLs on both IT and Finance departmental folders
-- [ ] Create IT and Finance SMB shares with matching scoped share-level permissions; validate no unexpected access ACEs
+- [x] Create and verify `IT` SMB share on IAM-FS01: path `C:\LabShares\IT`, access-based enumeration enabled, Administrators Full and `CORP\DL_IT_Share_RW` Change, with no broad-access share grants (PowerShell screenshots, 2026-11-13)
+- [ ] Create and verify `Finance` SMB share: path `C:\LabShares\Finance`, Administrators Full and `CORP\DL_Finance_Share_RW` Change, no broad access, AccessBased enumeration
 - [ ] Verify authorized access and cross-department denial with non-privileged test users
 - [ ] Document results with sanitized screenshots and PowerShell output
 
