@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-13 — AGDLP scope complete and lab folders created
+- PowerShell confirmed `DL_IT_Share_RW` has `GroupScope = DomainLocal` and `GroupCategory = Security`; Finance group scope/category and both Global group nestings were confirmed previously.
+- On IAM-FS01, `Get-ChildItem C:\LabShares -Directory` returned both `Finance` and `IT` directories at their intended paths.
+- No NTFS access modifications or SMB shares have been configured yet; next step is a read-only ACL inspection followed by a scoped permissions plan preserving SYSTEM and Administrators access.
+
 ## 2026-11-13 — Resource-level security group nesting verified
 - ADUC shows `DL_IT_Share_RW` and `DL_Finance_Share_RW` alongside the four departmental Global security groups under `IAM-Lab/Groups`.
 - `Get-ADGroupMember DL_IT_Share_RW` returned exactly the intended `GG_IT_Employees` group in the displayed output; Finance returned `GG_Finance_Employees`.
