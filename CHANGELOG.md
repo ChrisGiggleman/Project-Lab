@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-13 — Resource-level security group nesting verified
+- ADUC shows `DL_IT_Share_RW` and `DL_Finance_Share_RW` alongside the four departmental Global security groups under `IAM-Lab/Groups`.
+- `Get-ADGroupMember DL_IT_Share_RW` returned exactly the intended `GG_IT_Employees` group in the displayed output; Finance returned `GG_Finance_Employees`.
+- PowerShell screenshot confirms `DL_Finance_Share_RW` is DomainLocal / Security; IT resource group scope is not fully visible and is pending explicit confirmation.
+- Next action: create new empty IT/Finance folders on IAM-FS01, then configure and validate least-privilege NTFS/SMB permissions before exposing shares. No file-share access tests have been performed yet.
+
 ## 2026-11-13 — IAM-FS01 Servers OU move confirmed in PowerShell
 - A fresh `Get-ADComputer -Identity IAM-FS01 | Select Name,DistinguishedName` query confirmed `CN=IAM-FS01,OU=Servers,OU=IAM-Lab,DC=corp,DC=iamlab,DC=test`.
 - The earlier `CN=Computers` result came from before the move; this new independent test confirms the final OU location.
