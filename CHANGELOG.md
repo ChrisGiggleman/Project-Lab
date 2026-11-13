@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-13 — IAM-FS01 Servers OU move confirmed in PowerShell
+- A fresh `Get-ADComputer -Identity IAM-FS01 | Select Name,DistinguishedName` query confirmed `CN=IAM-FS01,OU=Servers,OU=IAM-Lab,DC=corp,DC=iamlab,DC=test`.
+- The earlier `CN=Computers` result came from before the move; this new independent test confirms the final OU location.
+- Next lab step: create domain-local groups `DL_IT_Share_RW` and `DL_Finance_Share_RW` in the IAM-Lab Groups OU and nest departmental Global groups. Actual SMB/NTFS permissions remain unconfigured and untested.
+
 ## 2026-11-13 — IAM-FS01 computer account organization
 - `Get-ADComputer` on IAM-DC01 confirmed IAM-FS01 is enabled and identified as Windows Server 2025 Standard Evaluation; initial distinguished name was in the default `CN=Computers` container.
 - Active Directory Users and Computers screenshot now shows IAM-FS01 beneath `IAM-Lab/Servers`, indicating the object was moved in the GUI.
