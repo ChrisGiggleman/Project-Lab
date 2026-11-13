@@ -36,7 +36,9 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 - [x] Confirm `DL_IT_Share_RW` is DomainLocal / Security in PowerShell (screenshot, 2026-11-13)
 - [x] Create and verify `C:\LabShares\IT` and `C:\LabShares\Finance` directories on IAM-FS01 (PowerShell screenshot, 2026-11-13)
 - [x] Inspect inherited NTFS permissions on IT and Finance folders; both show broad inherited BUILTIN\\Users rights (read/execute and create/append) plus SYSTEM and Administrators Full Control (screenshot 2026-11-13)
-- [ ] Back up ACLs, replace inherited broad access with scoped permissions on IT first, then validate ACL before configuring Finance
+- [x] Back up 3 ACLs in `C:\IAM-Lab-ACL-Backup\before-ntfs-change.acl` (0 failures, screenshot 2026-11-13)
+- [x] Apply explicit grants to IT for SYSTEM and Administrators Full Control and `CORP\DL_IT_Share_RW` Modify; disable inheritance with `/inheritance:r` (commands succeeded, screenshot 2026-11-13)
+- [ ] Verify IT folder's resulting ACL and inheritance-protection state before configuring Finance
 - [ ] Set least-privilege NTFS permissions and create IT and Finance SMB shares
 - [ ] Verify authorized access and cross-department denial with non-privileged test users
 - [ ] Document results with sanitized screenshots and PowerShell output
