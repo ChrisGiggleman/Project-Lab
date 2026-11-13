@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-13 — IT SMB share created and validated
+- Confirmed no preexisting `IT` SMB share, then `New-SmbShare` created `\\IAM-FS01\IT` with backing path `C:\LabShares\IT` and description `IAM Lab - IT Department`.
+- `Get-SmbShare` confirmed access-based folder enumeration (`AccessBased`).
+- `Get-SmbShareAccess -Name IT` displayed **only** two Allow entries: `BUILTIN\Administrators` Full and `CORP\DL_IT_Share_RW` Change; no broad Everyone/Users share grants were shown.
+- Existing NTFS folder ACL was already verified. Actual network access by non-admin employees is **not yet tested**.
+- Next: create and verify Finance share and its separate share-level ACL before cross-department authorization tests.
+
 ## 2026-11-13 — Finance NTFS ACL verified; both folders ready for SMB share configuration
 - `icacls C:\LabShares\Finance /grant:r` successfully granted SYSTEM/Administrators FullControl and `CORP\DL_Finance_Share_RW` Modify; `icacls /inheritance:r` completed successfully.
 - `Get-Acl` on `C:\LabShares\Finance` showed exactly three explicit Allow ACEs: SYSTEM FullControl, Administrators FullControl, and `CORP\DL_Finance_Share_RW` Modify/Synchronize; `IsInherited=False` for all and `AreAccessRulesProtected=True`.
