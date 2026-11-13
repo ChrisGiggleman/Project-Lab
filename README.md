@@ -72,7 +72,7 @@ All future lab write-ups use the same **problem → architecture → test plan �
 - [Directory structure and initial onboarding](docs/iam/03-directory-and-onboarding.md)
 - [Network troubleshooting and health checks](docs/iam/04-validation-and-troubleshooting.md)
 - [RBAC / file-server plan](docs/iam/05-file-server-rbac-plan.md)
-- [Cloud learning games & security lab resource library](docs/resources/cloud-learning-games.md) — 30 links across eight categories
+- [Cloud learning games & security lab resource library](docs/resources/cloud-learning-games.md) — 43 resources: cloud labs and security portfolio ideas
 - [Docker & DevOps project index](docs/devops/README.md)
 - [DevOps learning plan](docs/devops/learning-plan.md)
 - [Read-only IAM validation scripts](scripts/iam/README.md)
