@@ -10,10 +10,10 @@
 
 - [Cloud fundamentals](#cloud-fundamentals)
 - [Networking](#networking)
-- [Identity & access management (IAM)](#identity-access-management-iam)
-- [Compute & containers](#compute-containers)
+- [Identity & access management (IAM)](#identity--access-management-iam)
+- [Compute & containers](#compute--containers)
 - [Infrastructure as code (IaC)](#infrastructure-as-code-iac)
-- [Cloud security & pentesting](#cloud-security-pentesting)
+- [Cloud security & pentesting](#cloud-security--pentesting)
 - [Multi-cloud](#multi-cloud)
 - [Capstone project](#capstone-project)
 - [Cybersecurity portfolio project ideas (13-project collection)](#cybersecurity-portfolio-project-ideas--13-project-collection)
