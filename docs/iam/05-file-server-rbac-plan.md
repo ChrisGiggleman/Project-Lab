@@ -30,7 +30,8 @@ Two fictional employees have different permissions: Alex (IT) should be able to 
 - [x] Validate final IT folder DACL and inheritance disabled: explicit SYSTEM and Administrators Full Control and `CORP\DL_IT_Share_RW` Modify/Synchronize; no broad access ACEs; `AreAccessRulesProtected=True` (screenshot, 2026-11-13).
 - [x] Apply and validate Finance scoped NTFS ACL: SYSTEM/Administrators FullControl, `CORP\DL_Finance_Share_RW` Modify/Synchronize; all ACEs explicit, `AreAccessRulesProtected=True` (screenshots 2026-11-13).
 - [x] Configure and independently verify both IT and Finance NTFS ACLs preserving SYSTEM/Administrators Full Control and only the matching domain-local group Modify.
-- [ ] Create IT and Finance SMB shares after NTFS access is validated.
+- [x] Create and validate `\\IAM-FS01\IT` SMB share backed by `C:\LabShares\IT`, with AccessBased enumeration, `BUILTIN\Administrators` Full, and `CORP\DL_IT_Share_RW` Change; no broad share-level grants visible (2026-11-13 screenshots).
+- [ ] Create and validate `\\IAM-FS01\Finance` SMB share backed by `C:\LabShares\Finance`, with AccessBased enumeration, Administrators Full, and `CORP\DL_Finance_Share_RW` Change.
 - [x] Create IT and Finance resource-level security groups in the IAM-Lab Groups OU (ADUC screenshot).
 - [x] Verify both `DL_Finance_Share_RW` and `DL_IT_Share_RW` are DomainLocal / Security (PowerShell screenshots; IT confirmed 2026-11-13).
 - [x] Nest `GG_IT_Employees` into `DL_IT_Share_RW` (Get-ADGroupMember screenshot verified).
