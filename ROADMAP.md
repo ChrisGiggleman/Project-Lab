@@ -38,7 +38,8 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 - [x] Inspect inherited NTFS permissions on IT and Finance folders; both show broad inherited BUILTIN\\Users rights (read/execute and create/append) plus SYSTEM and Administrators Full Control (screenshot 2026-11-13)
 - [x] Back up 3 ACLs in `C:\IAM-Lab-ACL-Backup\before-ntfs-change.acl` (0 failures, screenshot 2026-11-13)
 - [x] Apply explicit grants to IT for SYSTEM and Administrators Full Control and `CORP\DL_IT_Share_RW` Modify; disable inheritance with `/inheritance:r` (commands succeeded, screenshot 2026-11-13)
-- [ ] Verify IT folder's resulting ACL and inheritance-protection state before configuring Finance
+- [x] Verify IT folder final DACL: SYSTEM and Administrators Full Control; `CORP\DL_IT_Share_RW` Modify; no broad Users/Everyone ACEs; all ACEs explicit and `AreAccessRulesProtected=True` (2026-11-13 screenshot)
+- [ ] Apply and verify Finance folder equivalent scoped DACL (SYSTEM and Administrators Full Control; `CORP\DL_Finance_Share_RW` Modify; inheritance disabled)
 - [ ] Set least-privilege NTFS permissions and create IT and Finance SMB shares
 - [ ] Verify authorized access and cross-department denial with non-privileged test users
 - [ ] Document results with sanitized screenshots and PowerShell output
