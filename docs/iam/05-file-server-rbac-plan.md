@@ -24,9 +24,10 @@ Two fictional employees have different permissions: Alex (IT) should be able to 
 - [x] ADUC visually shows IAM-FS01 under `OU=Servers,OU=IAM-Lab` following a move (GUI screenshot).
 - [x] Confirm the post-move Distinguished Name in PowerShell: `CN=IAM-FS01,OU=Servers,OU=IAM-Lab,DC=corp,DC=iamlab,DC=test` (screenshot verified, 2026-11-13).
 - [ ] Create IT and Finance folders and SMB shares.
-- [ ] Create domain-local groups `DL_IT_Share_RW` and `DL_Finance_Share_RW`.
-- [ ] Nest `GG_IT_Employees` into `DL_IT_Share_RW`.
-- [ ] Nest `GG_Finance_Employees` into `DL_Finance_Share_RW`.
+- [x] Create IT and Finance resource-level security groups in the IAM-Lab Groups OU (ADUC screenshot).
+- [x] Verify Finance group is DomainLocal/Security; recheck IT group scope explicitly because its scope output is cropped.
+- [x] Nest `GG_IT_Employees` into `DL_IT_Share_RW` (Get-ADGroupMember screenshot verified).
+- [x] Nest `GG_Finance_Employees` into `DL_Finance_Share_RW` (Get-ADGroupMember screenshot verified).
 - [ ] Apply resource access through domain-local groups using both share and NTFS permissions.
 - [ ] Test user access in separate standard-user sessions; preserve administrative and SYSTEM access.
 - [ ] Record successful authorized access and denied unauthorized access.
