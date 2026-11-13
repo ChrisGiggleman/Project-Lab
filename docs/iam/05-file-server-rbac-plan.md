@@ -1,6 +1,6 @@
 # Lab 05 — SMB File Server & Role-Based Access (Planned)
 
-> **Status:** `IAM-FS01` Windows Server 2025 Standard Evaluation booted and local Administrator login succeeded. `hostname` output confirmed IAM-FS01 and the OS reported build 10.0.26100. LDAP 389 and Kerberos 88 connections to the DC succeeded from `192.168.191.11`, and Server Manager shows domain `corp.iamlab.test`. Secure-channel verification passed (`Test-ComputerSecureChannel : True`) and `nltest` discovered IAM-DC01. AD computer object placement in the lab Servers OU is now confirmed by post-move PowerShell. VMware Tools and SMB/NTFS permissions are still pending. No share or NTFS access enforcement has been tested.
+> **Status:** `IAM-FS01` Windows Server 2025 Standard Evaluation booted and local Administrator login succeeded. `hostname` output confirmed IAM-FS01 and the OS reported build 10.0.26100. LDAP 389 and Kerberos 88 connections to the DC succeeded from `192.168.191.11`, and Server Manager shows domain `corp.iamlab.test`. Secure-channel verification passed (`Test-ComputerSecureChannel : True`) and `nltest` discovered IAM-DC01. AD computer object placement in the lab Servers OU is now confirmed by post-move PowerShell. VMware Tools and SMB/NTFS permissions are still pending. The departmental folders have been created and verified but no share or NTFS access enforcement has been tested.
 
 ## Scenario
 Two fictional employees have different permissions: Alex (IT) should be able to access IT resources, while Jordan (Finance) should be able to access Finance resources. Each should be denied access to the other department's share.
@@ -23,9 +23,12 @@ Two fictional employees have different permissions: Alex (IT) should be able to 
 - [x] Verify IAM-FS01 computer object exists, is enabled, and identifies as Windows Server 2025 Standard Evaluation (PowerShell screenshot).
 - [x] ADUC visually shows IAM-FS01 under `OU=Servers,OU=IAM-Lab` following a move (GUI screenshot).
 - [x] Confirm the post-move Distinguished Name in PowerShell: `CN=IAM-FS01,OU=Servers,OU=IAM-Lab,DC=corp,DC=iamlab,DC=test` (screenshot verified, 2026-11-13).
-- [ ] Create IT and Finance folders and SMB shares.
+- [x] Create and verify `C:\LabShares\IT` and `C:\LabShares\Finance` folders with PowerShell (2026-11-13 screenshot).
+- [ ] Review NTFS ACL inheritance and existing permissions on both folders.
+- [ ] Configure appropriate NTFS ACLs preserving SYSTEM and Administrators Full Control.
+- [ ] Create IT and Finance SMB shares after NTFS access is validated.
 - [x] Create IT and Finance resource-level security groups in the IAM-Lab Groups OU (ADUC screenshot).
-- [x] Verify Finance group is DomainLocal/Security; recheck IT group scope explicitly because its scope output is cropped.
+- [x] Verify both `DL_Finance_Share_RW` and `DL_IT_Share_RW` are DomainLocal / Security (PowerShell screenshots; IT confirmed 2026-11-13).
 - [x] Nest `GG_IT_Employees` into `DL_IT_Share_RW` (Get-ADGroupMember screenshot verified).
 - [x] Nest `GG_Finance_Employees` into `DL_Finance_Share_RW` (Get-ADGroupMember screenshot verified).
 - [ ] Apply resource access through domain-local groups using both share and NTFS permissions.
