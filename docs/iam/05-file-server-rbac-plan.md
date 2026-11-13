@@ -24,7 +24,8 @@ Two fictional employees have different permissions: Alex (IT) should be able to 
 - [x] ADUC visually shows IAM-FS01 under `OU=Servers,OU=IAM-Lab` following a move (GUI screenshot).
 - [x] Confirm the post-move Distinguished Name in PowerShell: `CN=IAM-FS01,OU=Servers,OU=IAM-Lab,DC=corp,DC=iamlab,DC=test` (screenshot verified, 2026-11-13).
 - [x] Create and verify `C:\LabShares\IT` and `C:\LabShares\Finance` folders with PowerShell (2026-11-13 screenshot).
-- [ ] Review NTFS ACL inheritance and existing permissions on both folders.
+- [x] Review ACLs for both folders: inherited BUILTIN\\Users Read/Execute, CreateFiles, AppendData; inherited SYSTEM/Administrators Full Control (Finance also has explicit Administrators Full Control); screenshot 2026-11-13.
+- [ ] Back up current ACLs outside the shares and safely remove broad inherited rights from one department folder at a time; validate effective DACL after each change.
 - [ ] Configure appropriate NTFS ACLs preserving SYSTEM and Administrators Full Control.
 - [ ] Create IT and Finance SMB shares after NTFS access is validated.
 - [x] Create IT and Finance resource-level security groups in the IAM-Lab Groups OU (ADUC screenshot).
