@@ -15,13 +15,13 @@
 | Windows Server 2025 domain controller (`IAM-DC01`) | **Completed** | [Deployment record](docs/iam/02-domain-controller-deployment.md) |
 | New forest, domain and DNS (`corp.iamlab.test`) | **Completed** | `Get-ADDomain`, `Get-ADForest`, service checks, `dcdiag` |
 | Organizational units for employee and admin separation | **Completed** | [Directory and onboarding](docs/iam/03-directory-and-onboarding.md) |
-| Initial employee provisioning (IT and Finance) | **Completed (lab-reported)** | AD user verification demonstrated for IT; Finance account created |
+| Initial employee provisioning (IT and Finance) | **Verified** | Both enabled employee accounts and departmental memberships verified |
 | Four departmental global security groups | **Completed** | PowerShell group enumeration; IT membership verified |
-| Member file server VM (`IAM-FS01`) | **Domain joined; secure channel and DC discovery verified; AD OU placement pending** | [RBAC test plan](docs/iam/05-file-server-rbac-plan.md) |
-| SMB/NTFS authorization testing | **Planned** | [RBAC test plan](docs/iam/05-file-server-rbac-plan.md) |
+| Member file server VM (`IAM-FS01`) | **Domain joined; secure channel, DC discovery and AD OU placement verified** | [RBAC test plan](docs/iam/05-file-server-rbac-plan.md) |
+| SMB/NTFS authorization testing | **Verified — 4/4 scenarios passed** | [RBAC test results](docs/iam/05-file-server-rbac-plan.md) |
 | Entra ID integration, MFA/SSO, access reviews | **Planned** | [Roadmap](ROADMAP.md) |
 
-**Technical stack:** Windows Server 2025 · Active Directory Domain Services · DNS · PowerShell · VMware Workstation · Windows Defender Firewall · SMB/NTFS (planned) · Microsoft Entra ID (planned)
+**Technical stack:** Windows Server 2025 · Active Directory Domain Services · DNS · PowerShell · VMware Workstation · Windows Defender Firewall · SMB/NTFS · Microsoft Entra ID (planned)
 
 ### Lab architecture
 
@@ -32,9 +32,9 @@ Main Windows workstation / VMware Workstation
     │   ├── AD DS / DNS / Global Catalog
     │   ├── corp.iamlab.test
     │   └── Departmental OUs and security groups
-    └── IAM-FS01 — Windows Server 2025 Standard Evaluation (joined to corp.iamlab.test; permissions lab pending)
-        ├── IT resource access (planned)
-        └── Finance resource access (planned)
+    └── IAM-FS01 — Windows Server 2025 Standard Evaluation (joined to corp.iamlab.test; effective SMB authorization verified)
+        ├── IT resource access (verified)
+        └── Finance resource access (verified)
 
 Separate GEEKOM mini PC
 └── Windows 11 Pro + WSL2 + Docker Desktop
