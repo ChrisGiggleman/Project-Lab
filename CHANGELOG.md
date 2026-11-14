@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-14 — Employee RBAC authorization verified
+- Both employee identities, departmental group nesting, AD authorization groups and selected file server local privileged groups reviewed.
+- Host TCP 445 connectivity succeeded; explicit employee SMB credentials verified via Get-SmbConnection (SMB 3.1.1).
+- Alex IT and Jordan Finance file create/read/write/modify/delete passed; Alex Finance and Jordan IT directory listing and file creation denied as expected. Four scenarios passed (22/22 checklist observations).
+- Recorded sanitized evidence and authentication troubleshooting in [Lab 05](docs/iam/05-file-server-rbac-plan.md). Kerberos and separate domain workstation sessions remain pending.
+
 ## 2026-11-14 — Finance SMB share created and verified
 - Confirmed IAM-FS01, existing Finance directory and no Finance share returned by baseline query.
 - Created `Finance` with backing path `C:\LabShares\Finance` and access-based enumeration.
