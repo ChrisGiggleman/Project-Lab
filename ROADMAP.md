@@ -15,7 +15,7 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 - [x] Create IT user Alex Morgan and validate AD attributes (verified)
 - [x] Create departmental global security groups (verified)
 - [x] Verify IT group contains Alex Morgan (verified)
-- [x] Create Finance user Jordan Lee (completed—reported; next verify details and membership)
+- [x] Create Finance user Jordan Lee (verified enabled account and Finance membership, 2026-11-14)
 - [ ] Confirm DNS SRV records, SYSVOL and NETLOGON SMB shares with recorded output
 
 ## Phase 2 — Resource authorization
@@ -43,8 +43,9 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 - [x] Verify least-privilege NTFS DACLs on both IT and Finance departmental folders
 - [x] Create and verify `IT` SMB share on IAM-FS01: path `C:\LabShares\IT`, access-based enumeration enabled, Administrators Full and `CORP\DL_IT_Share_RW` Change, with no broad-access share grants (PowerShell screenshots, 2026-11-13)
 - [x] Create and verify `Finance` SMB share: path `C:\LabShares\Finance`, Administrators Full and `CORP\DL_Finance_Share_RW` Change, no broad access, AccessBased enumeration (PowerShell screenshots, 2026-11-14)
-- [ ] Verify authorized access and cross-department denial with non-privileged test users
-- [ ] Document results with sanitized screenshots and PowerShell output
+- [x] Verify authorized access and cross-department denial with non-privileged test users (4/4 scenarios; 22/22 checklist observations, 2026-11-14)
+- [x] Document results with sanitized PowerShell evidence transcription in [Lab 05](docs/iam/05-file-server-rbac-plan.md); raw screenshots not published
+- [ ] Validate separate standard-user domain workstation sessions and Kerberos; clean up test SMB connection
 
 ## Phase 3 — IAM operations
 
