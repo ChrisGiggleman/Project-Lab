@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-14 — Finance SMB share created and verified
+- Confirmed IAM-FS01, existing Finance directory and no Finance share returned by baseline query.
+- Created `Finance` with backing path `C:\LabShares\Finance` and access-based enumeration.
+- Independent share ACL query showed only BUILTIN\Administrators Full and CORP\DL_Finance_Share_RW Change, both Allow.
+- Both departmental SMB and NTFS configurations are documented as verified; effective employee access remains untested.
+- Next: verify Alex and Jordan account/group membership and perform positive and negative SMB authorization tests.
+
 ## 2026-11-13 — IT SMB share created and validated
 - Confirmed no preexisting `IT` SMB share, then `New-SmbShare` created `\\IAM-FS01\IT` with backing path `C:\LabShares\IT` and description `IAM Lab - IT Department`.
 - `Get-SmbShare` confirmed access-based folder enumeration (`AccessBased`).
