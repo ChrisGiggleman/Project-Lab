@@ -62,7 +62,18 @@ The individual repositories contain the detailed implementation notes and files 
 
 The [Security Portfolio Backlog](SECURITY-PORTFOLIO-BACKLOG.md) tracks **13 candidate labs** across detection and response, threat intelligence and investigation, security engineering, and AI security. These are proposals—not claims of completed implementations. The Active Directory idea extends the current IAM lab rather than duplicating it.
 
-All future lab write-ups use the same **problem → architecture → test plan → evidence and findings → limitations** standard. The current IAM-FS01 lab remains the active build.
+All future lab write-ups use the same **problem → architecture → test plan → evidence and findings → limitations** standard. The existing Windows IAM lab remains the active build; departmental SMB authorization is verified, with domain workstation and Kerberos validation still pending.
+
+## Integrated career learning plans
+
+| Track | Learning plan | Focus |
+|---|---|---|
+| IAM engineering | [IAM engineering roadmap](docs/iam/engineering-learning-plan.md) | AD, Entra, JML, SSO, SCIM, IGA, PAM and cloud IAM |
+| Scripting & automation | [Practical scripting curriculum](docs/automation/learning-plan.md) | PowerShell, Python, Bash, SQL/SPL/KQL, APIs, testing |
+| Blue Team / SOC | [Defensive security learning plan](docs/security/blue-team-learning-plan.md) | TryHackMe, Sysmon, SIEM, detections, vulnerabilities, incident response |
+| Infrastructure / DevOps | [DevOps learning plan](docs/devops/learning-plan.md) | Linux, Git, Docker, monitoring and CI/CD |
+
+Start with the [master roadmap](ROADMAP.md). The new plans are proposed learning activities, not claims of completed work.
 
 ## Documentation
 
