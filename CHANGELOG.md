@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-15 — Integrated learning roadmap expanded
+- Added dedicated IAM engineering, scripting/automation and Blue Team/SOC learning plans with reference links, practical exercises and evidence gates.
+- Added TryHackMe practice as a complement to independent SOC engineering; Wazuh, Splunk, Sentinel and other tools remain proposed.
+- Updated master roadmap and resource navigation; preserved all 43 original resource links and the verified 4/4 SMB authorization results.
+- Next: close workstation/Kerberos validation and introduce a scoped read-only PowerShell inventory exercise. No new software deployed or lab tests claimed.
+
 ## 2026-11-14 — Employee RBAC authorization verified
 - Both employee identities, departmental group nesting, AD authorization groups and selected file server local privileged groups reviewed.
 - Host TCP 445 connectivity succeeded; explicit employee SMB credentials verified via Get-SmbConnection (SMB 3.1.1).
