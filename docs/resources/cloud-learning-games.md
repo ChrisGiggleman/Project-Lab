@@ -4,7 +4,7 @@
 
 **Source:** *Learn Cloud by Playing Games — Core Edition*, by **Sathish Kumar Subramani** (links transcribed from the user-provided resource graphic). This page is a curated index, not a claim that all resources have been completed, personally tested, or recently verified.
 
-**Resources:** 43 links in total — 30 cloud learning games and labs across 8 categories, plus 13 cybersecurity portfolio project ideas across 4 groups.
+**Original collections:** 43 links in total — 30 cloud learning games and labs across 8 categories, plus 13 cybersecurity portfolio project ideas across 4 groups.
 
 ## Quick navigation
 
@@ -17,6 +17,18 @@
 - [Multi-cloud](#multi-cloud)
 - [Capstone project](#capstone-project)
 - [Cybersecurity portfolio project ideas (13-project collection)](#cybersecurity-portfolio-project-ideas--13-project-collection)
+
+- [Additional learning collections](#additional-learning-collections)
+
+## Additional learning collections
+
+The 43 original resource links remain intact. These companion pages add curated official documentation, training links and project sequences:
+
+- [Scripting & automation](../automation/learning-plan.md#references) — PowerShell, Python, Bash, SQL/SPL/KQL and APIs.
+- [Blue Team & SOC](../security/blue-team-learning-plan.md#references-and-tools) — TryHackMe, Wazuh, Splunk, Sysmon, vulnerability management and incident response.
+- [IAM engineering](../iam/engineering-learning-plan.md#learning-references) — Entra, Keycloak, Okta, Graph, SAML, SCIM, WebAuthn, IGA/PAM, AWS and Terraform.
+- [DevOps practice resources](../devops/learning-plan.md#practice-resources) — Linux, Git, containers and observability.
+- [Master project roadmap](../../ROADMAP.md).
 
 ## Suggested starting route (IAM / cybersecurity focus)
 
@@ -145,5 +157,5 @@ These **13 proposed portfolio exercises** come from the second resource collecti
 
 ### Practical project order
 
-**Current:** Finish the existing [Active Directory / IAM file-server lab](../iam/05-file-server-rbac-plan.md). **Next candidates:** SIEM Log Analysis → SOC Detection & Response → Vulnerability Assessment, each as a separate authorized and documented project. See the [full backlog](../../SECURITY-PORTFOLIO-BACKLOG.md) for all 13 candidate projects.
+**Current:** Continue the existing [Active Directory / IAM file-server lab](../iam/05-file-server-rbac-plan.md) with workstation and Kerberos verification; departmental SMB authorization has already passed 4/4 scenarios. **Next candidates:** SIEM Log Analysis → SOC Detection & Response → Vulnerability Assessment, each as a separate authorized and documented project. See the [full backlog](../../SECURITY-PORTFOLIO-BACKLOG.md) for all 13 candidate projects.
 
