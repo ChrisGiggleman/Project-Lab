@@ -1,8 +1,20 @@
 # Project-Lab Roadmap
 
-Last updated: **2026-11-14**
+Last updated: **2026-11-15**
 
 Status vocabulary: **Verified** (command/output observed), **Completed—reported** (user reports success, not yet independently verified), **In progress**, **Planned**.
+
+## Integrated learning priorities
+
+**Next session:** Resume the existing Windows IAM lab. Review outstanding DNS/SYSVOL checks and clean up test SMB connections as needed; create/join a standard-user workstation, verify Kerberos and repeat the departmental access tests. The existing 4/4 SMB authorization result is already verified; do not redo it as an unstarted milestone. Introduce a read-only PowerShell reporting exercise alongside the lab work.
+
+- **Primary track:** workforce IAM and enterprise administration; [IAM engineering plan](docs/iam/engineering-learning-plan.md).
+- **Cross-cutting skill:** [scripting and automation curriculum](docs/automation/learning-plan.md) — PowerShell first, then Python, Bash, SQL/SPL/KQL; use guided practice followed by independent exercises and testing.
+- **Complementary track:** [Blue Team and SOC plan](docs/security/blue-team-learning-plan.md) — TryHackMe practice alongside independent lab telemetry, SIEM, detection, vulnerability management and incident response.
+- **Infrastructure:** retain existing [DevOps plan](docs/devops/learning-plan.md); introduce Docker, Git, cloud and Terraform when prerequisites are satisfied.
+- **Resources:** [Learning resource library](docs/resources/cloud-learning-games.md) and [13-project backlog](SECURITY-PORTFOLIO-BACKLOG.md).
+
+These are integrated learning tracks, not simultaneous deployments. Continue SC-300 preparation alongside the lab. Validate hardware capacity, licensing, isolation and budget before choosing tools.
 
 ## Phase 1 — Windows IAM Foundation
 
@@ -56,6 +68,10 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 - [ ] Practice least privilege, privileged account separation, and access reviews
 - [ ] Add event log review for authentication and account changes
 
+- [ ] Inventory and audit service accounts; distinguish human and workload identities
+- [ ] Develop read-only PowerShell reports and progressively test reusable JML scripts with rollback
+- [ ] Validate authentication, authorization and audit events before expanding monitoring
+
 ## Phase 4 — DevOps & monitoring
 
 - [x] Docker/WSL2 foundation validated (documented in linked repository)
@@ -72,11 +88,31 @@ Status vocabulary: **Verified** (command/output observed), **Completed—reporte
 - [ ] Study SSO integration (SAML/OIDC), Conditional Access, and user provisioning
 - [ ] Run a documented identity access review exercise
 
+## Phase 6 — SOC and defensive security
+
+- [ ] Practice TryHackMe SOC investigations; retain original notes without publishing restricted content
+- [ ] Enable scoped Windows audit policy and Sysmon; verify controlled events
+- [ ] Assess hardware and deploy one SIEM (Wazuh proposed); ingest lab telemetry and validate a detection
+- [ ] Learn Splunk SPL and Sentinel KQL using suitable training/sandbox environments
+- [ ] Document identity-related alerts, triage, false-positive tests and incident reports
+- [ ] Evaluate Sigma/YARA, vulnerability assessment, Wireshark/Zeek/Suricata, threat intelligence and forensics in sequence
+- [ ] See [Blue Team learning plan](docs/security/blue-team-learning-plan.md) for tool references and evidence requirements
+
+## Phase 7 — IAM engineering and cloud integrations
+
+- [ ] Study AuthN/AuthZ, federation, provisioning, LDAP, SAML, OAuth, OIDC, JWT, SCIM, WebAuthn and certificates
+- [ ] Evaluate and deploy isolated Keycloak; configure SSO for two mock applications
+- [ ] Practice Microsoft Graph/REST APIs and mock SCIM provisioning/deprovisioning
+- [ ] Implement simulated access certification, access request workflow and privileged-account audits
+- [ ] Explore IGA/PAM platforms (SailPoint, Saviynt, CyberArk, BeyondTrust) only with suitable licensed training access
+- [ ] Evaluate AWS IAM/CIEM, Terraform, workload identities and secrets management in a cost-controlled sandbox
+- [ ] See [IAM engineering plan](docs/iam/engineering-learning-plan.md) for learning outcomes and dependencies
+
 ## Candidate Security Projects — Backlog (13 ideas)
 
 - [x] Capture all **13** ideas and original reference links in [Security Portfolio Backlog](SECURITY-PORTFOLIO-BACKLOG.md).
 - [ ] Review source links, feasibility, tool licenses, hardware limits, risk boundaries and fit before selecting a project.
-- [ ] Select a next project **after** finishing the active IAM-FS01 AD object organization / AGDLP and file share authorization tests.
+- [ ] Select a next project **after** closing the remaining workstation/Kerberos validation and core IAM operations milestones.
 - [ ] Produce a scoped architecture, test plan and evidence checklist for any selected candidate.
 - [ ] Verify and document actual findings, limitations and mitigations before describing a new project as complete.
 
