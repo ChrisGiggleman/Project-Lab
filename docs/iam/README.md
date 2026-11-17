@@ -1,6 +1,6 @@
 # Windows Active Directory & IAM Lab
 
-**Status: Active development** — domain controller, employee provisioning and departmental SMB authorization verified; standard-user workstation and Kerberos validation pending.
+**Status: Active development** — domain controller, employee provisioning and departmental SMB authorization verified; workstation deployment and OU placement verified; employee sign-ins and Kerberos pending.
 
 ## Lab objectives
 
@@ -20,7 +20,8 @@ Build practical IAM administration experience with Windows Server 2025, Active D
 - Alex Morgan and Jordan Lee are enabled and departmental memberships verified.
 - `IAM-FS01` is installed, joined to the domain and placed in the Servers OU; secure channel verified.
 - Departmental AGDLP nesting, SMB and NTFS ACLs verified. Four authorization scenarios passed (22/22 observations) on 2026-11-14; see [Lab 05](05-file-server-rbac-plan.md).
-- Pending: separate standard-user domain workstation sessions, Kerberos validation, test SMB connection cleanup and remaining baseline checks.
+- SMB test session cleanup verified; IAM-CL01 deployed and domain trust/Workstations OU verified (2026-11-17).
+- Pending: separate standard-user domain workstation sessions, Kerberos validation and remaining baseline checks.
 
 ## Contents
 
@@ -30,8 +31,9 @@ Build practical IAM administration experience with Windows Server 2025, Active D
 4. [Validation and troubleshooting](04-validation-and-troubleshooting.md)
 5. [File-server RBAC lab and results](05-file-server-rbac-plan.md)
 
-6. [IAM engineering learning plan](engineering-learning-plan.md)
-7. [Scripting and automation curriculum](../automation/learning-plan.md)
-8. [Blue Team and SOC learning plan](../security/blue-team-learning-plan.md)
+6. [Workstation deployment](06-workstation-deployment.md)
+7. [IAM engineering learning plan](engineering-learning-plan.md)
+8. [Scripting and automation curriculum](../automation/learning-plan.md)
+9. [Blue Team and SOC learning plan](../security/blue-team-learning-plan.md)
 
 See [verification scripts](../../scripts/iam/README.md) for reusable read-only checks.
