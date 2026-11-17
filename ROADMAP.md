@@ -1,12 +1,12 @@
 # Project-Lab Roadmap
 
-Last updated: **2026-11-15**
+Last updated: **2026-11-17**
 
 Status vocabulary: **Verified** (command/output observed), **Completed—reported** (user reports success, not yet independently verified), **In progress**, **Planned**.
 
 ## Integrated learning priorities
 
-**Next session:** Resume the existing Windows IAM lab. Review outstanding DNS/SYSVOL checks and clean up test SMB connections as needed; create/join a standard-user workstation, verify Kerberos and repeat the departmental access tests. The existing 4/4 SMB authorization result is already verified; do not redo it as an unstarted milestone. Introduce a read-only PowerShell reporting exercise alongside the lab work.
+**Next session:** Inspect IAM-CL01 local privileges, validate separate employee domain sign-ins and Kerberos, repeat departmental access tests by DNS name, and review outstanding SYSVOL/NETLOGON checks before GPO and read-only PowerShell reporting. Workstation deployment and OU placement are verified; prior 4/4 SMB scenarios remain verified.
 
 - **Primary track:** workforce IAM and enterprise administration; [IAM engineering plan](docs/iam/engineering-learning-plan.md).
 - **Cross-cutting skill:** [scripting and automation curriculum](docs/automation/learning-plan.md) — PowerShell first, then Python, Bash, SQL/SPL/KQL; use guided practice followed by independent exercises and testing.
@@ -57,11 +57,13 @@ These are integrated learning tracks, not simultaneous deployments. Continue SC-
 - [x] Create and verify `Finance` SMB share: path `C:\LabShares\Finance`, Administrators Full and `CORP\DL_Finance_Share_RW` Change, no broad access, AccessBased enumeration (PowerShell screenshots, 2026-11-14)
 - [x] Verify authorized access and cross-department denial with non-privileged test users (4/4 scenarios; 22/22 checklist observations, 2026-11-14)
 - [x] Document results with sanitized PowerShell evidence transcription in [Lab 05](docs/iam/05-file-server-rbac-plan.md); raw screenshots not published
-- [ ] Validate separate standard-user domain workstation sessions and Kerberos; clean up test SMB connection
+- [x] Clean up test SMB connection (net use and Get-SmbConnection empty, 2026-11-14)
+- [ ] Validate separate standard-user domain workstation sessions and Kerberos
 
 ## Phase 3 — IAM operations
 
-- [ ] Join a Windows client VM to the domain
+- [x] Join Windows 11 client IAM-CL01 to the domain; secure channel and DC discovery verified (2026-11-17)
+- [x] Verify workstation Secure Boot, TPM, static IP/DNS and Workstations OU placement; see [Lab 06](docs/iam/06-workstation-deployment.md)
 - [ ] Demonstrate joiner/mover/leaver lifecycle tasks
 - [ ] Build PowerShell scripts for repeatable, auditable provisioning
 - [ ] Configure GPOs for sample workstation controls
