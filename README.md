@@ -19,6 +19,7 @@
 | Four departmental global security groups | **Completed** | PowerShell group enumeration; IT membership verified |
 | Member file server VM (`IAM-FS01`) | **Domain joined; secure channel, DC discovery and AD OU placement verified** | [RBAC test plan](docs/iam/05-file-server-rbac-plan.md) |
 | SMB/NTFS authorization testing | **Verified — 4/4 scenarios passed** | [RBAC test results](docs/iam/05-file-server-rbac-plan.md) |
+| Windows 11 workstation (`IAM-CL01`) | **Domain joined; trust and Workstations OU verified** | [Lab 06](docs/iam/06-workstation-deployment.md) |
 | Entra ID integration, MFA/SSO, access reviews | **Planned** | [Roadmap](ROADMAP.md) |
 
 **Technical stack:** Windows Server 2025 · Active Directory Domain Services · DNS · PowerShell · VMware Workstation · Windows Defender Firewall · SMB/NTFS · Microsoft Entra ID (planned)
@@ -32,9 +33,10 @@ Main Windows workstation / VMware Workstation
     │   ├── AD DS / DNS / Global Catalog
     │   ├── corp.iamlab.test
     │   └── Departmental OUs and security groups
-    └── IAM-FS01 — Windows Server 2025 Standard Evaluation (joined to corp.iamlab.test; effective SMB authorization verified)
+    ├── IAM-FS01 — Windows Server 2025 Standard Evaluation (joined to corp.iamlab.test; effective SMB authorization verified)
         ├── IT resource access (verified)
         └── Finance resource access (verified)
+    └── IAM-CL01 — Windows 11 Enterprise Evaluation (domain joined; Workstations OU verified)
 
 Separate GEEKOM mini PC
 └── Windows 11 Pro + WSL2 + Docker Desktop
@@ -62,7 +64,7 @@ The individual repositories contain the detailed implementation notes and files 
 
 The [Security Portfolio Backlog](SECURITY-PORTFOLIO-BACKLOG.md) tracks **13 candidate labs** across detection and response, threat intelligence and investigation, security engineering, and AI security. These are proposals—not claims of completed implementations. The Active Directory idea extends the current IAM lab rather than duplicating it.
 
-All future lab write-ups use the same **problem → architecture → test plan → evidence and findings → limitations** standard. The existing Windows IAM lab remains the active build; departmental SMB authorization is verified, with domain workstation and Kerberos validation still pending.
+All future lab write-ups use the same **problem → architecture → test plan → evidence and findings → limitations** standard. The existing Windows IAM lab remains the active build; departmental SMB authorization is verified, with workstation deployment verified and employee sign-in/Kerberos validation pending.
 
 ## Integrated career learning plans
 
@@ -82,6 +84,7 @@ Start with the [master roadmap](ROADMAP.md). The new plans are proposed learning
 - [Windows Server deployment](docs/iam/02-domain-controller-deployment.md)
 - [Directory structure and initial onboarding](docs/iam/03-directory-and-onboarding.md)
 - [Network troubleshooting and health checks](docs/iam/04-validation-and-troubleshooting.md)
+- [Workstation deployment](docs/iam/06-workstation-deployment.md)
 - [RBAC / file-server plan](docs/iam/05-file-server-rbac-plan.md)
 - [Cloud learning games & security lab resource library](docs/resources/cloud-learning-games.md) — 43 resources: cloud labs and security portfolio ideas
 - [Docker & DevOps project index](docs/devops/README.md)
