@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-17 — Windows workstation deployment and OU placement verified
+- Installed Windows 11 Enterprise Evaluation on IAM-CL01; 2 logical processors, 4 GB RAM, TPM ready, Secure Boot remediated and verified.
+- Static IP 192.168.191.20/24 and AD DNS 192.168.191.10 verified; pre-join DNS and TCP tests passed. Server availability explained earlier connectivity failures.
+- Domain membership, secure channel and DC discovery verified. Computer moved to Workstations OU and verified via PowerShell and ADUC.
+- Recorded earlier SMB session cleanup and [Lab 06 evidence](docs/iam/06-workstation-deployment.md). Employee sign-ins, Kerberos and GPO remain pending.
+
 ## 2026-11-15 — Integrated learning roadmap expanded
 - Added dedicated IAM engineering, scripting/automation and Blue Team/SOC learning plans with reference links, practical exercises and evidence gates.
 - Added TryHackMe practice as a complement to independent SOC engineering; Wazuh, Splunk, Sentinel and other tools remain proposed.
