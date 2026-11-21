@@ -35,5 +35,6 @@ Build practical IAM administration experience with Windows Server 2025, Active D
 7. [IAM engineering learning plan](engineering-learning-plan.md)
 8. [Scripting and automation curriculum](../automation/learning-plan.md)
 9. [Blue Team and SOC learning plan](../security/blue-team-learning-plan.md)
+10. [Active Directory basics — diagram and quick reference](../resources/active-directory-basics.md)
 
 See [verification scripts](../../scripts/iam/README.md) for reusable read-only checks.
