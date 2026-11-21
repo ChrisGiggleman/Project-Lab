@@ -26,6 +26,7 @@
 
 ## Additional learning collections
 
+- [Active Directory basics — visual quick reference](active-directory-basics.md) — five-minute diagram, GPOs, OUs, group-based access and IAM lab examples.
 - [20 cybersecurity reference websites](cybersecurity-websites-20.md) — CISA/NVD/EPSS, MITRE, NIST, OWASP, hands-on labs, network analysis and threat intelligence.
 The 43 original resource links remain intact. These companion pages add curated official documentation, training links and project sequences:
 
