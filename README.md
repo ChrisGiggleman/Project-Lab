@@ -88,6 +88,7 @@ Start with the [master roadmap](ROADMAP.md). The new plans are proposed learning
 - [RBAC / file-server plan](docs/iam/05-file-server-rbac-plan.md)
 - [Cloud learning games & security lab resource library](docs/resources/cloud-learning-games.md)
 - [20 cybersecurity reference websites](docs/resources/cybersecurity-websites-20.md) — vulnerability intelligence, MITRE, NIST, OWASP, network analysis and threat research
+- [Active Directory basics — visual quick reference](docs/resources/active-directory-basics.md) — domains, OUs, users, groups, GPOs and permissions
 - [Windows troubleshooting command reference — 200 commands](docs/resources/windows-troubleshooting-200-commands.md)
 - [Docker & DevOps project index](docs/devops/README.md)
 - [DevOps learning plan](docs/devops/learning-plan.md)
