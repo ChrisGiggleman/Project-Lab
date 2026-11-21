@@ -6,6 +6,10 @@
 
 **Original collections:** 43 links in total — 30 cloud learning games and labs across 8 categories, plus 13 cybersecurity portfolio project ideas across 4 groups.
 
+## Windows troubleshooting reference
+
+**[Windows Troubleshooting Reference — 200 Commands](windows-troubleshooting-200-commands.md)** — a separate CMD/PowerShell toolkit organized into ten categories, with purpose descriptions and cautions for disruptive or recovery commands. The original LinkedIn resource link is preserved there; the catalog was independently compiled because the full post was not accessible.
+
 ## Quick navigation
 
 - [Cloud fundamentals](#cloud-fundamentals)
@@ -29,6 +33,10 @@ The 43 original resource links remain intact. These companion pages add curated 
 - [IAM engineering](../iam/engineering-learning-plan.md#learning-references) — Entra, Keycloak, Okta, Graph, SAML, SCIM, WebAuthn, IGA/PAM, AWS and Terraform.
 - [DevOps practice resources](../devops/learning-plan.md#practice-resources) — Linux, Git, containers and observability.
 - [Master project roadmap](../../ROADMAP.md).
+
+## Related command reference
+
+- [Windows troubleshooting — 200-command reference](windows-troubleshooting-200-commands.md)
 
 ## Suggested starting route (IAM / cybersecurity focus)
 
