@@ -87,7 +87,8 @@ Start with the [master roadmap](ROADMAP.md). The new plans are proposed learning
 - [Workstation deployment](docs/iam/06-workstation-deployment.md)
 - [RBAC / file-server plan](docs/iam/05-file-server-rbac-plan.md)
 - [Cloud learning games & security lab resource library](docs/resources/cloud-learning-games.md)
-- [Windows troubleshooting command reference — 200 commands](docs/resources/windows-troubleshooting-200-commands.md) — 43 resources: cloud labs and security portfolio ideas
+- [20 cybersecurity reference websites](docs/resources/cybersecurity-websites-20.md) — vulnerability intelligence, MITRE, NIST, OWASP, network analysis and threat research
+- [Windows troubleshooting command reference — 200 commands](docs/resources/windows-troubleshooting-200-commands.md)
 - [Docker & DevOps project index](docs/devops/README.md)
 - [DevOps learning plan](docs/devops/learning-plan.md)
 - [Read-only IAM validation scripts](scripts/iam/README.md)
